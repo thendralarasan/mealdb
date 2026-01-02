@@ -8,7 +8,7 @@ const Header = () => {
         <div className= " flex items-center gap-6">
         <Link to="/" className= "text-xl font-bold">MealDB</Link>
         <Link to="/">Categories</Link>
-        <Link to="/">Favorites</Link>
+        <Link to="/favorites">Favorites</Link>
         </div>
         <form  className="flex gap-3">
             <input type="text" className= "bg-white px-3 py-1 rounded outline-none  text-gray-800  w-48 sm:w-64"  placeholder='search meals'/>
