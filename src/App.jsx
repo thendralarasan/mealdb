@@ -5,6 +5,7 @@ import CategaryMeals from "./pages/CategaryMeals";
 import Mealdetails from "./pages/Mealdetails";
 import { FavoritesProvider } from "./Contexts/Favcontexts";
 import Favorites from "./pages/Favorites";
+import SearchResult from "./pages/SearchResult";
 
 function App() {
   return (
@@ -14,8 +15,10 @@ function App() {
     <Routes>
       <Route path="/" element={<Home/>}/>
       <Route path="/category/:category" element={<CategaryMeals/>}/>
-      <Route path="/meal/id"  element={<Mealdetails/>} />
+      <Route path="/meal/:id"  element={<Mealdetails/>} />
       <Route path="/favorites" element={<Favorites/>} />
+      <Route path="/search" element={<SearchResult/>}/>
+      <Route path="*" element={<h1 className=" text-center text-5xl text-red-700">404 - Not Found</h1>}/>
     </Routes>
     </FavoritesProvider>
     </BrowserRouter>
