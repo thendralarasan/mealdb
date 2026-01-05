@@ -3,6 +3,7 @@ import LoadingSpinner from '../components/LoadingSpinner';
 import { fetchcategories } from '../api/mealdb';
 import { Link } from 'react-router-dom';
 
+
 const Home = () => {
     const [Categories, setcategories] = useState([])
     const [loading, setloading] = useState(true)
@@ -17,6 +18,7 @@ const Home = () => {
     },[]);
     if(loading) return <LoadingSpinner/>
       return <div className="max-w-6xl mx-auto p-3">
+    
         <div className="text-center mb-10 mt-3">
             <h1 className="text-2xl md:text-3xl font-semibold text-emerald-900 tracking-tight">Browse meal Categories</h1>
             <p className='mt-3 text-lg text-gray-500 font-semibold '>discover delicious recipes from around the world</p>
@@ -34,6 +36,7 @@ const Home = () => {
             </Link>
         ))}
         </div>
+
      </div>
 }
 export default Home

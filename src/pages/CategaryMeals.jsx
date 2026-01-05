@@ -14,7 +14,7 @@ const CategaryMeals = () => {
         .then((Response)=> setmeals(Response.data.meals || []))
         .catch((err)=> console.log(err))
         .finally(()=>setloading(false));
-    },[]);
+    },[category]);
     if(loading)return <LoadingSpinner/>
   return (
     <div className='max-w-6xl mx-auto p-4'>
