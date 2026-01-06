@@ -12,7 +12,7 @@ const Header = () => {
     navigate(`/search?q=${encodeURIComponent(query)}`);
   }
   return (
-  <header className= "bg-emerald-900 text-white p-4 shadow relative ">
+  <header className= "bg-emerald-900 text-white p-4 shadow relative z-0 ">
     <nav className= " max-w-6xl mx-auto flex flex-col sm:flex-row gap-4 items-center justify-between">
         <div className= " flex items-center gap-6">
         <Link to="/" className= "text-xl font-bold">MealDB</Link>
@@ -32,7 +32,7 @@ const Header = () => {
       <Countrymeals/>
     </div>
  </header>
+
   )
 }
-
 export default Header

@@ -17,7 +17,7 @@ const Home = () => {
         })
     },[]);
     if(loading) return <LoadingSpinner/>
-      return <div className="max-w-6xl mx-auto p-3">
+      return <div className="max-w-6xl mx-auto p-3 relative z-10 mt-6">
     
         <div className="text-center mb-10 mt-3">
             <h1 className="text-2xl md:text-3xl font-semibold text-emerald-900 tracking-tight">Browse meal Categories</h1>
