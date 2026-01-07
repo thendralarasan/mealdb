@@ -3,7 +3,7 @@ import { useNavigate, useSearchParams } from 'react-router-dom'
 const countries = [
   { label: 'Indian', value: 'Indian' },
   { label: 'Italian', value: 'Italian' },
-  { label: 'Canadian', value: 'Canadian' },
+  { label: 'Canadian', value: 'Canadian' }
 ]
 
 const Countrymeals = () => {
@@ -16,7 +16,12 @@ const Countrymeals = () => {
       {countries.map(c => (
         <button
           key={c.value}
-          onClick={() => navigate(`/?country=${c.value}`)}
+          onClick={() => {if(activecountry === c.value){
+            navigate(`/`)
+          }else{
+            navigate(`/? country=${c.value}`);
+          }}
+        }
           className={`px-5 py-2 rounded-full font-medium transition
             ${activecountry === c.value
               ? 'bg-emerald-700 text-white'
