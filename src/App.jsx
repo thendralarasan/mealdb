@@ -7,6 +7,7 @@ import { FavoritesProvider } from "./Contexts/Favcontexts";
 import Favorites from "./pages/Favorites";
 import SearchResult from "./pages/SearchResult";
 import Countrymeals from "./pages/Countrymeals";
+import Category from "./pages/Category";
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
     <Header/>
     <Routes>
       <Route path="/" element={<Home/>}/>
+      <Route path="/Category" element={<Category/>}/>
       <Route path="/category/:category" element={<CategaryMeals/>}/>
       <Route path="/meal/:id"  element={<Mealdetails/>} />
       <Route path="/favorites" element={<Favorites/>} />

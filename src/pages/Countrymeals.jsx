@@ -17,7 +17,7 @@ const Countrymeals = () => {
         <button
           key={c.value}
           onClick={() => {if(activecountry === c.value){
-            navigate(`/`)
+          navigate(`/`)
           }else{
             navigate(`/? country=${c.value}`);
           }}
