@@ -1,6 +1,6 @@
 /// <reference types="vite/client" />
 
-declare module "*.mp4" {
+declare module "" {
   const src: string;
   export default src;
 }

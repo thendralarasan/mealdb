@@ -21,7 +21,6 @@ const MealDetails = () => {
   if (loading) return <LoadingSpinner />;
   if (!meal) return <p className="text-center mt-10">Meal not found</p>;
 
-  // ✅ Extract ingredients
   const ingredients = [];
   for (let i = 1; i <= 20; i++) {
     const ing = meal[`strIngredient${i}`];
@@ -38,9 +37,9 @@ const MealDetails = () => {
       <h1 className="text-2xl md:text-3xl font-bold text-emerald-900 text-center mb-8">
         {meal.strMeal}
       </h1>
-      {/* TOP SECTION: IMAGE + INGREDIENTS */}
+
       <div className="grid md:grid-cols-2 gap-10 items-start mb-10">
-        {/* LEFT: IMAGE */}
+       
         <div>
           <img
             src={meal.strMealThumb}
@@ -81,7 +80,7 @@ const MealDetails = () => {
         </div>
       )}
 
-      {/* INSTRUCTIONS */}
+     
       <div className="max-w-4xl mx-auto">
         <h2 className="text-xl font-semibold mb-4">Instructions</h2>
         <p className="text-gray-700 leading-relaxed whitespace-pre-line">
